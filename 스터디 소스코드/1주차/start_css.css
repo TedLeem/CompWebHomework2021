@@ -1,0 +1,99 @@
+/* css 사용법 */
+/* 
+선택자 {
+    속성: 속성값;
+}
+*/
+
+
+/* 
+class: 중복가능 (p태그, h1 태그 등 서로 다른 종류의 태그여도 같은 class 할당 가능.)
+id: 오직 하나만
+각 태그에 class 또는 id를 주고 그 class 또는 id를 선택할 수 있음. - for_css.html 파일 참고
+
+선택자에는 아래와 같은 것들이 있음.
+* -> 전체를 선택
+tag -> 특정 태그를 선택
+id -> 특정 id값을 가진 것을 선택.
+class -> 특정 class값을 가진 것을 선택.
+
+
+h1, p과 같이 여러개를 선택하고 같은 스타일을 적용할 수도 있음.
+
+
+-- 다양한 속성과 속성값 --
+color: color 코드 [red 또는 rgb(255, 0, 0) 또는 #FF0000];
+    https://htmlcolorcodes.com/ 이런 사이트에서 color 코드를 확인할 수 있음.
+
+background-color: color 코드;
+
+font-size: 원하는 크기;
+    px 고정적인 값. 디스플레이의 해상도를 기준으로
+    rem html 파일의 기본크기를 기준으로 몇배
+    em 부모의 크기를 기준으로 몇배 -> 부모 태그, 자식 태그, 형제 태그
+    vw 디스플레이의 너비를 기준. 1vw는 화면 너비의 1/100
+    vh 디스플레이의 높이를 기준. 1vh는 화면 높이의 1/100
+
+font-family: 'Times New Roman', Times, serif;
+    원하는 폰트 종류를 우선 순위대로 입력한 후 마지막에 글꼴 유형 입력.
+    글꼴 유형에는 selif, sans-serif, cursive, fantasy, monospace등이 있음.
+    글꼴유형은 폰트가 아니라 어떤 스타일인지 표기하는 것.
+
+font-weight: 100~900이 있지만 글꼴에서 지원이 돼야 적용이 됨.
+
+margin: 컨텐츠 외부에 여백
+    margin: 값1개 = 사방에 모두 같은 값이 적용.
+    margin: 값2개 = 처음 값은 위,아래 / 두번째 값은 좌우에 적용
+    margin: 값3개 = 처음 값은 위 / 두번째 값은 좌우 / 세번째 값은 아래에 적용
+    margin: 값4개 = 처음 값부터 순서대로 상 -> 우 -> 하 -> 좌 (시계 방향)
+    사이즈 외에도 auto 사용 가능.
+
+    물리적 속성
+    margin-top
+    margin-bottom
+    margin-left
+    margin-right
+    로 각각 따로 지정할 수도 있음.
+
+
+padding: 컨텐츠 내부에 여백
+    margin과 마찬가지로 적용 가능.
+
+
+border-style: 스타일 속성값에는 dotted, none, inset, dashed, solid, groove 등이 있음.
+border-width: 원하는 크기;
+border-color: color 코드;
+스타일, 너비, 색 모두 각 모서리마다 다르게 적용할 수 있음.
+
+위에 속성들을 border를 통해 한번에 지정할 수도 있음.
+border: {사이즈(너비)} {스타일} {색}; 외부에 둘러싸는 선.
+
+
+display: block inline inline-block flex grid none 등이 있음.;
+none은 해당 컨텐츠를 없애는 것.
+flex, grid는 레이아웃 짤 때 많이 사용됩니다. 추후에 더 자세히 알아보겠습니다. 매우매우 중요함!!
+
+
+position: 속성값으로는 static, relative, absolute, fixed, sticky...
+https://developer.mozilla.org/ko/docs/Web/CSS/position 이 링크를 참조해주세요.
+간략히 설명하면
+static은 기본값.
+relative는 원래 위치에서 상대적으로 지정 값만큼 이동.
+absolute는 html의 흐름에서 벗어나서 지정 위치에 위치.
+fixed는 스크롤이 내려가더라도 무조건 그 위치에 있도록 지정하는 것.
+sticky는 평소에는 static처럼 있지만 스크롤링에 의해 지정한 위치에서 벗어나야 할 때 벗어나지 않고 그 위치에 고정 되는 것.
+
+
+@media (max-width:1100px) {
+    p {color: red;}
+}
+()안에 있는 조건일 때 아래의 스타일이 적용되도록 하는 것.
+
+
+css가 적용이 안 될 때 확인해야 할 사항.
+1. 코드를 입력하고 제대로 저장했는지 확인
+2. link태그로 html에 css코드를 연결시켰는지 확인
+3. 선택자가 제대로 설정됐는지 확인
+4. 두 개의 css파일이 충돌하거나 혹은 한개의 선택자에 대해 여러 스타일을 입력해 충돌하는 경우인지 확인.
+
+*/
