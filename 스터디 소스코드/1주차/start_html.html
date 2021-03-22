@@ -1,0 +1,168 @@
+<!-- 주석은 ctrl + / 로 달 수 있음. -->
+
+<!--
+    속성은 태그의 기능, 의미 등을 보조해주는 역할을 함.
+
+    태그를 적절하게 사용해야 하는 이유 -> 협업과 검색엔진 최적화를 위해 -> 부적절하면 내 웹페이지의 가치가 떨어짐.
+    태그를 적절히 사용해야 검색엔진이 내 웹페이지를 정확하게 파악할 수 있고, 
+    협업 시 동료 개발자가 더 쉽게 코드를 이해할 수 있음.
+
+    태그에는 닫아야 하는 태그와 닫을 필요 없는 태그가 있다.
+ -->
+
+<!DOCTYPE html> <!-- html의 버전을 표기. 현재 버전은 html5. -->
+<html lang="ko"> <!-- html의 시작을 알림. lang은 이 문서가 어떤 언어를 주로 사용하는지를 의미.-->
+
+    <head> <!-- 문서의 정보를 입력 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comp 웹 스터디</title> <!-- 제목 -->
+
+        <style>
+            h1 {
+                color:red;
+            }
+        </style> <!-- css 사용법2. 내부적으로 css 사용하는 법. style 태그를 이용 -->
+
+        <link href="./start_css.css" rel="stylesheet" />
+        <!-- css 사용법3. 외부적으로 css 사용하는 법. rel은 relation의 약자. 어떤 목적의 파일인지를 의미-->
+        
+    </head>
+
+    <body> <!-- 브라우저에서 보여지는 부분 -->
+        <!-- 태그 안에 태그를 얼마든지 사용해도 좋음. 서로의 관계를 부모태그, 자식태그, 형제태그 라고 표현. -->
+
+        <!-- 1. h태그 -->
+        <h1>h1 입니다.</h1>
+        <h2>h2 입니다.</h2>
+        <h3>h3 입니다.</h3>
+        <h4>h4 입니다.</h4>
+        <h5>h5 입니다.</h5>
+        <h6>h6 입니다.</h6>
+        <!-- 
+            h 태그는 숫자가 작을수록 의미의 중요성이 높음.
+            검색엔진 최적화에 매우 중요
+            rule 1. h1 태그는 한 html에서 한번만 사용해야 함.
+            rule 2. h 태그는 순차적으로 사용하는 것이 좋음.
+        -->
+
+        <!-- 2. p태그 -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> Aperiam laboriosam quisquam nam! Ullam tenetur, magnam exercitationem temporibus cum dolore id beatae numquam quia laborum molestiae, eaque doloribus eligendi, harum obcaecati?</p>
+        <p>Lorem                             ipsum dolor sit amet consectetur adipisicing elit. Voluptates incidunt accusamus nostrum architecto consectetur enim, odit nihil illo natus sapiente libero minima officiis tempore fuga eaque eius dolor, eum officia.</p>
+        <p>Lorem &nbsp; &nbsp; &nbsp; &nbsp; ipsum dolor sit amet consectetur adipisicing elit. Voluptates incidunt accusamus nostrum architecto consectetur enim, odit nihil illo natus sapiente libero minima officiis tempore fuga eaque eius dolor, eum officia.</p>
+        <!-- p태그는 문단을 의미. 여러개 쓰면 p태그들 사이에 공백이 생김.
+            태그 안에서는 띄어쓰기, 엔터 적용 안됨. 각각 &nbsp, <br/>을 사용해야함. -->
+        
+
+        <!-- 3. a태그 -->
+        <a href="http://www.naver.com" target="_blank">여기를 누르면 네이버로 감.</a> <!-- 외부 링크로 이동 -->
+        <!-- target="_blank"를 넣으면 새 탭에서 링크를 열 수 있음. -->
+        <a href="./for_css.html">여기를 누르면 for_css로 감.</a> <!-- 내부에서 서로 이동 -->
+
+
+        <!--  4. img태그 -->
+        <img src="images/중앙대.jpg" alt="중앙대 로고" width="200px"/>
+        <img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="구글 로고" width="200px"/>
+        <!-- ./ 는 현재 폴더를 의미함. ../ 는 상위 폴더를 의미함. -->
+        <!-- 이미지의 주소는 자기 파일에서 불러올 수도 있고, 외부링크를 이용해서 불러올 수도 있음.
+            반드시 alt 속성을 입력할 것. 시각장애인과 이미지 불러오기에 실패할 경우를 위해.-->
+
+        <!-- 응용하면 <a> <img/> </a> 도 가능. 이미지를 클릭하면 해당 링크로 이동하도록-->
+
+
+
+        <!-- 5. strong, em, b, i 태그 -->
+        <!-- strong 태그는 중요한 내용을 의미. em 태그는 강조하고 싶은 내용을 의미.
+            b, i 태그는 위 태그와 외적으론 같지만 중요, 강조의 의미는 없음. -->
+        <p><strong>출처를 알 수 없는 링크를 클릭하지 마세요.</strong></p> <!-- strong 사용예-->
+        <p>이번에는 <em>strong, em, b, i</em>를 알아봅시다.</p> <!-- em 사용예-->
+
+
+        <p>
+            <strong>중요하면서 <em style="color: red;">강조하고 싶은 내용</em></strong>
+            <!-- css 사용법1. 인라인 스타일 방법. 태그 안에 style 속성 사용. "속성: 속성값;" 형태는 그대로.-->
+        </p>
+
+        <p>
+            <em>강조하는 문장 속에서 <strong style="color: red;">중요한 내용</strong></em>
+        </p>
+
+        <p>
+            <strong>중요한 문장 속에서 <strong style="color: red;">더 중요한 내용</strong></strong>
+        </p>
+        
+        <p>
+            <em>강조하는 문장인데 <em style="color: red;">더 강조하려는 내용</em></em>
+        </p>
+
+
+        <!-- 6. 리스트 태그 -->
+
+        <!-- unordered list -->
+        <h2>오늘의 할 일</h2>
+        <ul> <!-- 순서가 없는 리스트 태그 -->
+            <li>강의 듣기</li>
+            <li>과제 하기</li>
+            <li>운동 하기</li>
+        </ul>
+
+        <!-- ordered list -->
+        <h2>오늘의 할 일 순서</h2>
+        <ol type="I"> <!-- 순서가 있는 리스트 태그 --><!-- type을 바꿔서 인덱싱 기호를 바꿀 수 있음. -->
+            <li>강의 듣기</li>
+            <li>과제 하기</li>
+            <li>운동 하기</li>
+        </ol>
+
+        <!-- definition list-->
+        <h2>메뉴판</h2>
+        <dl> <!-- 사전형식의 리스트 태그 -->
+            <dt>짜장면</dt> <!-- dt에는 정의하고자 하는 것 -->
+            <dd>돼지고기와 양파, 호박, 생강 등을 다져 중국 된장(춘장)과 함께 볶은 양념을 국수에 비벼 먹는 요리.</dd>
+            <dd>1905년에 세워진 인천 차이나타운의 ‘공화춘’이라는 식당에 메뉴로 처음 등장하였으며, 이때 한국인들의 입맛에 맞춰 다양한 재료와 캐러멜이 함유된 춘장이 개발되었다.</dd>
+            <!-- dd에는 dt에 대한 설명. 구분되는 내용은 서로 다른 dd에 넣어주세요~ -->
+
+            <dt>짬뽕</dt> <!-- dl 안에 dt를 여러개 써도 됨. -->
+            <dd>야채와 돼지고기, 해물 등을 기름에 볶아 닭이나 돼지뼈로 만든 육수를 넣고 끓인 중국식 요리.</dd>
+            <dd>원래 돼지고기, 표고버섯, 죽순, 파 등을 넣고 끓인 국물에 국수를 넣어 먹은 탕러우쓰[湯肉絲麵]에서 유래한 음식이다.</dd>
+        </dl>
+
+
+        <!-- 7. div와 span & display: block과 inline-->
+
+        <div style="background-color: skyblue;">안녕하세요.</div>
+        <div style="background-color: skyblue;">반갑습니다.</div>
+        <!-- div는 기본적으로 display가 block. block은 혼자 한 줄을 모두 차지. -->
+
+        <span style="background-color: pink;">안녕하세요.</span>
+        <span style="background-color: pink;">반갑습니다.</span>
+        <!-- span은 기본적으로 display가 inline. inline은 width나 height를 지정해도 무시됨. 딱 컨텐츠의 크기만 차지함. -->
+
+        <span style="background-color: red; display: inline-block;">안녕하세요.</span>
+        <span style="background-color: red; display: inline-block;">반갑습니다.</span>
+        <!-- inline-block은 inline 같이 컨텐츠 크기만 차지하지만 너비, 높이를 주면 적용이 됨.
+            button 태그 등이 기본적으로 inline-block-->
+
+        
+        <!-- 8. 입력하는 태그들. input, button... -->
+
+        <!-- input태그의 다양한 type 중 원하는 것을 선택해서 사용가능.
+            placeholder 속성은 기본적으로 표시될 문구를 의미함. ex) "아이디를 입력하세요." -->
+        <input type="text" placeholder="내용을 입력하세요." />
+        <input type="password" />
+        <input type="checkbox" />
+        <input type="radio" />
+        
+        <form action="" name="fruit"> <!-- form 태그는 input, button 등 입력 태그들을 묶어주고 동작을 수행시킬 수 있음. -->
+            <input type="radio" name="fruit" value="apple" />사과
+            <input type="radio" name="fruit" value="banana" />바나나
+            <input type="radio" name="fruit" value="lemon" />레몬
+            <button name="fruit" type="submit">선택</button>
+        </form>
+        <!-- name 속성이 같은 것끼리 연결되는 것. value 속성은 해당 input이 전달하고 싶은 값을 의미. -->
+        
+        <button name="button" type="submit" onclick="alert('안녕하세요')">버튼</button>
+    
+    </body>
+</html>
