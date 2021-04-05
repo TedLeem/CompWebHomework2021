@@ -1,0 +1,49 @@
+/* 
+그리드는 기본적으로 컨테이너를 꽉 채우려고 함.
+
+<기본 틀 짜기>
+display: grid;          이걸 지정해주며 시작
+
+grid-template-columns   값을 입력한 개수만큼 열이 생김
+grid-template-rows      값을 입력한 개수만큼 행이 생김
+                        위 2개 속성 안에 repeat()사용 가능. minmax()도 사용 가능.
+
+<셀 간격 설정>
+column-gap              열 간격 설정
+row-gap                 행 간격 설정
+gap                     행과 열 동시에 간격 설정.
+
+<각 셀의 영역 지정(컨테이너가 아니라 각 셀에 지정.)>
+grid-column-start       시작 지점 설정
+grid-column-end         끝나는 지점 설정
+grid-column             위 2개를 한번에 지정
+
+grid-row-start          시작 지점 설정
+grid-row-end            끝나는 지점 설정
+grid-row                위 2개를 한번에 지정
+*/
+
+.container {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* repeat(4, 1fr) */
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* grid-column: 1 / 3; */
+    grid-row: 1 / 4; /* 이거랑 같음. 1 / span 3 */
+}
+
+.item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.item:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+    opacity: 0.7;
+}
