@@ -1,0 +1,67 @@
+/*
+<컨테이너에 지정하는 속성값>
+display: flex       이걸 지정해주며 시작
+flex-direction:     축의 방향을 결정                              row(기본), column, row-reverse, column-reverse
+flex-wrap:          브라우저의 너비를 넘어갈 때 어떻게 할지        nowrap(기본), wrap, wrap-reverse
+flex-flow:          flex-direction과 flex-wrap을 한번에 지정
+
+justify 키워드는 메인축 방향으로 정렬
+justify-content     메인축 방향으로 정렬                          flex-start(기본), flex-end, center, space-between, space-around, space-evenly
+
+align 키워드는 교차축 방향으로 정렬
+align-items         교차축 방향으로 정렬                          strech(기본), flex-start, flex-end, center, baseline
+align-content       여러 행(2줄 이상)일때 교차축 방향 정렬         strech(기본), flex-start, flex-end, center, space-between, space-around, space-evenly
+                    따라서 flex-wrap: wrap; 이어야 함
+
+
+<아이템에 지정하는 속성값>
+flex-basis          아이템이 가지는 기본 크기를 설정(flex-direction이 row일 땐 너비를, column일 땐 높이를 설정) 기본은 auto.
+flex-grow           아이템이 flex-basis 값보다 더 커질 수 있는지를 결정. 기본 0
+flex-shrink         아이템이 flex-basis 값보다 더 작아질 수 있는지를 결정. 기본 1
+flex                위 세개를 한번에 지정
+
+align-self          개별 아이템에 align-items를 적용. 따라서 align-items보다 우선권이 있고 속성값도 동일
+order               아이템의 순서를 지정. 주의할 점은 html상의 순서는 바뀌지 않는다!
+z-index             말 그대로 z축의 값을 지정. 기본은 0. 숫자를 값으로 입력하면 됨. 숫자가 클수록 위로 올라옴
+*/
+
+/* flex에서 중요한 것은 축!
+메인축: 아이템이 배열되는 방향 
+교차축: 메인축의 수직 방향 */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    flex-basis: 200px;
+    /* width: 100px; */
+    /* flex-grow: 1; */
+
+}
+
+.item:nth-child(1) {
+    /* order: 4;
+
+    z-index: 1;
+    transform: scale(1.5);
+    opacity: 0.8; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+}
+.item:nth-child(2) {
+    /* order: 3; */
+    /* flex-grow: 2; */
+}
+.item:nth-child(3) {
+    /* order: 2; */
+    /* flex-grow: 3; */
+}
+.item:nth-child(4) {
+    /* order: 1; */
+    /* flex-grow: 4; */
+}
