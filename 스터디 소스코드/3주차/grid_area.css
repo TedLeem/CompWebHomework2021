@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+
+    grid-template-areas:
+    "header    header  header"
+    "sidebar-l main    sidebar-r"
+    "footer    footer  footer"
+    /* none 이나 .을 쓰면 공백이 됨 */
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar-l {
+    grid-area: sidebar-l;
+}
+
+.sidebar-r {
+    grid-area: sidebar-r;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/*
+<그리드 정렬하기>
+그리드는 메인축, 교차축 개념 X. 따라서 align 키워드는 세로축, justify 키워드는 가로축이라고 생각하면 됨.
+
+[컨테이너에 적용하는 속성들]
+align-items         세로축 방향으로 정렬                    strech(기본), start, end, center
+justify-items       가로축 방향으로 정렬                    strech(기본), start, end, center
+                    flex는 1차원 배열이기 때문에 없던 속성
+place-items         위 2개 속성을 한번에 쓰는 속성. align, justify 순으로 입력.
+
+align-content       통째로 묶어서 세로축 방향으로 정렬       strech(기본), start, end, center, space-between, space-around, space-evenly
+justify-content     통째로 묶어서 가로축 방향으로 정렬       strech(기본), start, end, center, space-between, space-around, space-evenly
+place-content       위 2개 속성을 한번에 쓰는 속성. align, justify 순으로 입력.
+
+[개별 아이템에 적용하는 속성들]
+align-self          세로축 방향으로 정렬                    strech(기본), start, end, center
+justify-self        가로축 방향으로 정렬                    strech(기본), start, end, center
+place-self          위 2개 속성을 한번에 쓰는 속성. align, justify 순으로 입력.
+
+order               아이템의 순서를 지정. 주의할 점은 html상의 순서는 바뀌지 않는다!
+z-index             말 그대로 z축의 값을 지정. 기본은 0. 숫자를 값으로 입력하면 됨. 숫자가 클수록 위로 올라옴
+*/
