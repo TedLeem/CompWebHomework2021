@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 | 글 목록</title>
+    <link rel="stylesheet" href="./default.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .post {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            border: 1px solid black;
+            padding: 0 10px;
+            margin-top: 10px;
+        }
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <!--  네비게이션 바  -->
+    <nav>
+        <a href="/post">글쓰기</a>
+        <a href="/">게시글 리스트</a>
+    </nav>
+
+    <h1>게시글 목록</h1>
+
+    <div id="post-list">
+        <div class="post">
+            <a class="title" href="./example.html">
+                <span >제목</span>
+            </a>
+            <span>날짜 2021년 05월 ...</span>
+        </div>
+    </div>
+</body>
+</html>
