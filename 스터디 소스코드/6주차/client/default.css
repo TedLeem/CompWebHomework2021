@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto 10vh;
+    width: 75vw;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    flex-basis: 200px;
+}
