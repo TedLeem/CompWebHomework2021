@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "자신의 MySQL 비밀번호",
+    "port": "3306",
+    "database": "comp"  <-여기는 스키마 이름
+}
