@@ -38,7 +38,7 @@ app.get('/post', (req, res) => {
 app.post('/post', (req, res) => {
     console.log(req.body);
     connection.query(
-        `insert into comp3.posting (title, contents) value ('${req.body.title}', '${req.body.contents}')`
+        `insert into comp.posting (title, contents) value ('${req.body.title}', '${req.body.contents}')`
     )
 })
 
