@@ -29,8 +29,8 @@ array3.map((key) => {
     console.log(key.contents);
 })
 
-console.log(array);     //[40, 50, 60, 70, 80]
-console.log(array2);    //[80, 100, 120, 140, 160]
+console.log(array);     //결과: [40, 50, 60, 70, 80]
+console.log(array2);    //결과: [80, 100, 120, 140, 160]
 
 
 
