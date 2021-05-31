@@ -52,12 +52,12 @@ document.querySelector("#delete").addEventListener("click", async () => {
     if(confirm("정말 삭제하시겠습니까? 삭제하면 다시 복구할 수 없습니다.")) {
         try {
             await axios.delete(`/${id}`);
+            alert("삭제 되었습니다.")
+            location.href = "/"     //삭제 후 메인 페이지로 이동
         } catch(err) {
             alert("삭제에 실패했습니다.");
             console.log(err);
         }
-        alert("삭제 되었습니다.")
-        location.href = "/"     //삭제 후 메인 페이지로 이동
     }
 })
 
