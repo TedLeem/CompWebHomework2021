@@ -75,6 +75,11 @@ app.get('/detail-data/:id', (req, res) => {
     );
 })
 
+//수정 페이지
+app.get('/update/:id', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/post.html'))
+})
+
 //게시글 수정 요청. 수정은 put 메소드!
 app.put('/update/:id', (req, res) => {
     connection.query(
